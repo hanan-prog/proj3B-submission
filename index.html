@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ray Tracer Project 3</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+  </head>
+  <body>
+    <header>
+      <h1>Ray Tracer Project 3 Part B</h1>
+      <p>Hanan Abdirahman</p>
+    </header>
+
+    <div>
+      <h2>Implementation Details</h2>
+      <p>
+        Part B is essentially an extension of my code base from Part A. All of the rendering logic is implmented in Camera.h, I extended shading code to handle point, spot, and directional lights. I also added code to handle refraction as well as reflections.
+      </p>
+      <p>
+        You can download the code here 
+        <a href="p3.zip">here</a>. There's a
+        Makefile to help with the compilation. To compile:
+        <code>make clean && make</code> and to run
+        <code>./raytracer 'filename'</code>
+      </p>
+
+      <h2>Difficulties/Issues Faced</h2>
+      <p>
+        Implementing spot light was so hard and adding refraction to my code was so hard. 
+        I would get weird artificats on my sphere, rings within the sphere and there was a prominent black border around the green sphere.
+      </p>
+
+      <h2>Features Implemented</h2>
+      <p>A list of features i was able to implement are listed below, I wasn't able to get the triangle rendering to work. </p>
+        <ul>
+            <li>Arbitrary camera placement, film resolution, and aspect ratio</li>
+            <li>Arbitrary scenes with spheres arbitrary background colors</li>
+            <li>Arbitrary materials, including diffuse and specular shading, reflections, and refractions</li>
+            <li>Point and directional lights</li>
+            <li>Ambient lighting</li>
+            <li>Shadows</li>
+            <li>Recursion to a bounded depth</li>
+        </ul>
+
+        <div>
+            <p>Some images that showcase them working. The bear is my favorite, it was very cool and rewarding!</p>
+            <img src="./images/bear.png" style="max-width: 400px">
+            <p>The grey 'ground' sphere showing up on top of the image is a result of the way my camera basis vectors are calculated and I wasn't able to fix it. The grey ground sphere doesn't get reflected to the top of the second image.</p>
+            <img src="./images/spheres1.png" style="max-width: 400px">
+            <img src="./images/spheres2.png" style="max-width: 400px">
+            <p>Spot lights were tough, it took a very long time to debug why the angle calculation were not working. This the best I could get it to work.</p>
+            <img src="./images/raytraced.bmp" style="max-width: 400px;">
+            <img src="/images/spotlight_test.png" style="max-width: 400px;">
+            <p>Ambient lighting was the easiest to implement and worked right off the bat</p>
+            <img src="./images/ambient.bmp" style="max-width: 400px;">
+
+        </div>
+      
+    </div>
+  </body>
+</html>
